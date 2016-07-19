@@ -1,0 +1,21 @@
+Steps performed
+1. Installed Docker for Mac
+2. Tested the installation by importing public Docker images for sample applicatation nginx. It worked
+3. Created a new folder called mydocker2
+4. Inside the folder mydocker2, created a Dockerfile file and added below lines
+  FROM ggtools/java8
+  MAINTAINER gopaldk@gmail.com
+  CMD java -jar landing.jar
+  ADD landing.jar landing.jar
+ 5. PAsted the executable java jar inside the folder 'mydocker2'
+ 6. executed the docker command within the folder 'mydocker2'
+    docker build -t first-docker-img
+ 7. After successful build the command docker ps will show like below
+    ONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+6dfbabeb328a        first-docker-img    "/bin/sh -c 'java -ja"   27 seconds ago      Up 25 seconds                           happy_kalam    
+
+8. triggered run command
+   docker run first-docker-img
+9. I can see the same command line entries as I get when I execute the java -jar command without docker.
+10. I tried to test my executable by going to browser and typing localhos:8080/com.kalp.land
+IT WONT work   
