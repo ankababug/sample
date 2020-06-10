@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jarapp
+  labels:
+    name: jarapp
+spec:
+  containers:
+  - name: jar-cont
+    image: ankababu/sample
+    ports:
+    - containerPort: 8087
